@@ -21,4 +21,4 @@ class Solution:
             temp //= 10
 
         return total == n
-        
+    
