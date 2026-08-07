@@ -4,22 +4,22 @@ class Solution:
         left = max(weights)
         right = sum(weights)
 
+
         while left <= right:
-            mid = (left+right)//2
+
+            mid = (left + right) // 2
 
             day = 1
-            curr_w = 0
+            load = 0
 
             for w in weights:
-                if curr_w + w > mid:
-                    day += 1
-                    curr_w = w
+                if load + w <= mid:
+                    load += w
                 
                 else:
-                    curr_w += w    
-                    
-                
-            
+                    load = w
+                    day += 1
+
             if day <= days:
                 right = mid - 1
             
@@ -27,4 +27,8 @@ class Solution:
                 left = mid + 1
         
         return left
+
+
+
+
         
