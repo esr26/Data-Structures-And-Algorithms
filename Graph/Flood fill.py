@@ -1,17 +1,20 @@
 from collections import deque
 
 class Solution:
-    def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
+    def floodFill(
+        self,
+        image: list[list[int]],
+        sr: int,
+        sc: int,
+        color: int
+    ) -> list[list[int]]:
+
         original = image[sr][sc]
 
         if original == color:
             return image
 
-        rows = len(image)
-        cols = len(image[0])
-
-        queue = deque([(sr, sc)])
-        image[sr][sc] = color
+        m, n = len(image), len(image[0])
 
         directions = [
             (-1, 0),
@@ -20,6 +23,9 @@ class Solution:
             (0, 1)
         ]
 
+        queue = deque([(sr, sc)])
+        image[sr][sc] = color
+
         while queue:
             r, c = queue.popleft()
 
@@ -27,11 +33,12 @@ class Solution:
                 nr = r + dr
                 nc = c + dc
 
-                if 0 <= nr < rows and 0 <= nc < cols:
-                    if image[nr][nc] == original:
-                        image[nr][nc] = color
-                        queue.append((nr, nc))
+                if (
+                    0 <= nr < m
+                    and 0 <= nc < n
+                    and image[nr][nc] == original
+                ):
+                    image[nr][nc] = color
+                    queue.append((nr, nc))
 
         return image
-
-        
