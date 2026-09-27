@@ -1,41 +1,18 @@
-from collections import deque
-
 class Solution:
-    def solve(self, board: List[List[str]]) -> None:
+    def solve(self, board: list[list[str]]) -> None:
+
         m = len(board)
         n = len(board[0])
 
-        queue = deque()
-
-        # Add all boundary O's
-        for r in range(m):
-            if board[r][0] == "O":
-                queue.append((r, 0))
-                board[r][0] = "S"
-
-            if board[r][n - 1] == "O":
-                queue.append((r, n - 1))
-                board[r][n - 1] = "S"
-
-        for c in range(n):
-            if board[0][c] == "O":
-                queue.append((0, c))
-                board[0][c] = "S"
-
-            if board[m - 1][c] == "O":
-                queue.append((m - 1, c))
-                board[m - 1][c] = "S"
-
         directions = [
-            (1, 0),
             (-1, 0),
-            (0, 1),
-            (0, -1)
+            (1, 0),
+            (0, -1),
+            (0, 1)
         ]
 
-        # BFS from all boundary O's
-        while queue:
-            r, c = queue.popleft()
+        def dfs(r, c):
+            board[r][c] = "S"
 
             for dr, dc in directions:
                 nr = r + dr
@@ -46,15 +23,28 @@ class Solution:
                     and 0 <= nc < n
                     and board[nr][nc] == "O"
                 ):
-                    board[nr][nc] = "S"
-                    queue.append((nr, nc))
+                    dfs(nr, nc)
 
-        # Final conversion
+        # 1. Mark all boundary-connected O's as safe
+        for r in range(m):
+            if board[r][0] == "O":
+                dfs(r, 0)
+
+            if board[r][n - 1] == "O":
+                dfs(r, n - 1)
+
+        for c in range(n):
+            if board[0][c] == "O":
+                dfs(0, c)
+
+            if board[m - 1][c] == "O":
+                dfs(m - 1, c)
+
+        # 2. Capture surrounded O's
         for r in range(m):
             for c in range(n):
                 if board[r][c] == "O":
                     board[r][c] = "X"
+
                 elif board[r][c] == "S":
                     board[r][c] = "O"
-
-                    
