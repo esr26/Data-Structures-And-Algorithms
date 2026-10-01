@@ -1,35 +1,37 @@
+from collections import defaultdict
+
 class Solution:
-    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        def dfs(course):
-
-            if state[course] == 1:
-                return False
-            
-            if state[course] == 2:
-                return True
-            
-            state[course] = 1
-
-            for neigh in graph[course]:
-
-                if not dfs(neigh):
-                    return False
-            
-            state[course] = 2
-            return True
-
-
-        
-        graph = defaultdict(list)
-        for c1, c2 in prerequisites:
-            graph[c2].append(c1)
+    def canFinish(self, numCourses: int, prerequisites: list[list[int]]) -> bool:
 
         state = [0] * numCourses
-        for course in range(numCourses):
-            if not dfs(course):
+        graph = defaultdict(list)
+
+        for a, b in prerequisites:
+            graph[b].append(a)
+
+        def dfs(node):
+
+            # Completely processed → no cycle
+            if state[node] == 2:
                 return False
-        
+
+            # Currently being explored → cycle
+            if state[node] == 1:
+                return True
+
+            state[node] = 1
+
+            for nei in graph[node]:
+                if dfs(nei):
+                    return True
+
+            # Finished exploring this node
+            state[node] = 2
+
+            return False
+
+        for node in range(numCourses):
+            if dfs(node):
+                return False
+
         return True
-
-
-
