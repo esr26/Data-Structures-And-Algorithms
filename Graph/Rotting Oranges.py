@@ -1,45 +1,47 @@
+from collections import deque
+
+
 class Solution:
-    def orangesRotting(self, grid: List[List[int]]) -> int:
+    def orangesRotting(self, grid: list[list[int]]) -> int:
+        if not grid or not grid[0]:
+            return 0
 
-        m = len(grid)
-        n = len(grid[0])
-
+        m, n = len(grid), len(grid[0])
         queue = deque()
-        fresh = 0
 
-        for i in range(m):
-            for j in range(n):
-
-                if grid[i][j] == 2:
-                    queue.append((i, j))
-                
-                elif grid[i][j] == 1:
-                    fresh += 1
-        
         minutes = 0
+        directions = [
+            (-1, 0),
+            (1, 0),
+            (0, -1),
+            (0, 1),
+        ]
 
-        directions = [[0,1], [1,0], [-1, 0], [0,-1]]
+        for r in range(m):
+            for c in range(n):
+                if grid[r][c] == 2:
+                    queue.append((r, c))
 
-        while queue and fresh > 0:
+        while queue:
+            rotted = False
 
             for _ in range(len(queue)):
+                r, c = queue.popleft()
 
-                row, col = queue.popleft()
+                for dr, dc in directions:
+                    nr, nc = r + dr, c + dc
 
-                for r, c in directions:
-                    nr = row + r
-                    nc = col + c
+                    if 0 <= nr < m and 0 <= nc < n and grid[nr][nc] == 1:
+                        grid[nr][nc] = 2
+                        queue.append((nr, nc))
+                        rotted = True
 
-                    if 0 <= nr < m and 0 <= nc < n:
-                        if grid[nr][nc]==1:
-                            grid[nr][nc] = 2
-                            fresh -= 1
-                            queue.append((nr, nc))
+            if rotted:
+                minutes += 1
 
-            minutes += 1
+        for r in range(m):
+            for c in range(n):
+                if grid[r][c] == 1:
+                    return -1
 
-        return minutes if fresh == 0 else -1 
-
-                
-        
-        
+        return minutes
