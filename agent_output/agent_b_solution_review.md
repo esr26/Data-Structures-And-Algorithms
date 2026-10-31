@@ -1,5 +1,7 @@
 # Agent B — Solution quality review
 
+This is the baseline audit before the fixes on `agent/dsa-cleanup`. See [remediation summary](remediation_summary.md) for the current state.
+
 Reviewed **157 Python files** in the 10 topic folders. Complexities describe the implementation as written, using `n` for a one-dimensional input, `m × n` for a grid, `V/E` for graph vertices/edges, `L` for word length, `Σ` for alphabet size, `R/S/M` for a binary-search numeric range, and `α` for inverse Ackermann. Output storage is excluded only where stated. `—` means no concrete issue found under the usual problem constraints; it is not a proof of correctness.
 
 ## Confirmed blockers

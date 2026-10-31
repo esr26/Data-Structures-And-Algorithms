@@ -99,3 +99,7 @@ Created 83 infographic prompts, one for each distinct algorithm or instructional
 ## Verification
 
 Confirmed 83 text files exist; each includes all three section headings and 4–6 numbered steps. Every cited source file in the prompts exists in the repo.
+
+## Subsequent addition
+
+The root agent later changed `Array & Hashing/find duplicate number.py` to Floyd cycle detection and added `visual_prompts/floyd_cycle_detection.txt`. The current prompt total is 84.

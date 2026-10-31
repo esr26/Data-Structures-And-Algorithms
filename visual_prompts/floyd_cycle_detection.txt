@@ -1,0 +1,17 @@
+Create a precise educational infographic titled "Floyd cycle detection for a duplicate number" for a Python DSA learner. Use three labeled sections and one small pointer trace.
+
+When to Use
+Use when an array of n+1 values in 1..n contains one duplicate, the input must remain unchanged, and constant extra space is required.
+
+How It Works
+Example: nums = [1,3,4,2,2]. Following index -> nums[index] from index 0 gives 0 -> 1 -> 3 -> 2 -> 4 -> 2, so the cycle enters at value 2.
+1. Treat each index as a node with one outgoing edge to nums[index].
+2. Start slow and fast pointers at nums[0]; move slow one edge and fast two edges until they meet.
+3. Reset slow to nums[0] while leaving fast at the meeting point.
+4. Move both one edge at a time until they meet again at the cycle entrance.
+5. Return that entrance value as the duplicate, without changing the array.
+
+Quick Facts
+O(n) time and O(1) extra space. Pitfall: starting or resetting at the wrong node can return the wrong value; the input constraints make this index graph valid.
+
+Visual direction: show the array, pointer arrows, first meeting, and cycle entrance with consistent labels. Keep the example and steps readable. Source pattern in repo: Array & Hashing/find duplicate number.py.
