@@ -1,17 +1,17 @@
 from collections import deque
 
-visited = set()
-queue = deque(["A"])
+def iterative_bfs(graph, start):
+    visited = {start}
+    order = []
+    queue = deque([start])
 
-while queue:
-    node = queue.popleft()
+    while queue:
+        node = queue.popleft()
+        order.append(node)
 
-    if node in visited:
-        continue
+        for neighbor in graph.get(node, []):
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)
 
-    visited.add(node)
-    print(node)
-
-    for neighbor in graph[node]:
-        if neighbor not in visited:
-            queue.append(neighbor)
+    return order

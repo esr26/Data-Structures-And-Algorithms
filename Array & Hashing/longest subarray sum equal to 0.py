@@ -1,16 +1,13 @@
-prefix = 0
-mp = {0: -1}
+def longest_zero_sum_subarray(nums):
+    prefix = 0
+    first_seen = {0: -1}
+    longest = 0
 
-longest = 0
+    for i, value in enumerate(nums):
+        prefix += value
+        if prefix in first_seen:
+            longest = max(longest, i - first_seen[prefix])
+        else:
+            first_seen[prefix] = i
 
-for i in range(len(nums)):
-
-    prefix += nums[i]
-
-    if prefix in mp:
-        longest = max(longest, i - mp[prefix])
-
-    if prefix not in mp:
-        mp[prefix] = i
-
-return longest
+    return longest

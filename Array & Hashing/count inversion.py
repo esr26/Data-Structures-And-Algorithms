@@ -35,5 +35,6 @@ def merge_sort(nums):
     return res, count
 
 
-_, count = merge_sort(arr)
-return count
+def count_inversions(arr):
+    _, count = merge_sort(arr)
+    return count

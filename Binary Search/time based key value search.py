@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 class TimeMap:
 
     def __init__(self):

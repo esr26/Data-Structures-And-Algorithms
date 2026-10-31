@@ -1,5 +1,9 @@
+from typing import List
+
 class Solution:
     def findPeakGrid(self, mat: List[List[int]]) -> List[int]:
+        if not mat or not mat[0]:
+            return [-1, -1]
 
         m = len(mat)
         n = len(mat[0])
@@ -19,10 +23,10 @@ class Solution:
                     max_row = row
 
             # Check left neighbor
-            left_val = mat[max_row][mid - 1] if mid > 0 else -1
+            left_val = mat[max_row][mid - 1] if mid > 0 else float("-inf")
 
             # Check right neighbor
-            right_val = mat[max_row][mid + 1] if mid < n - 1 else -1
+            right_val = mat[max_row][mid + 1] if mid < n - 1 else float("-inf")
 
             curr = mat[max_row][mid]
 
@@ -39,5 +43,3 @@ class Solution:
                 right = mid - 1
 
         return [-1, -1]
-
-    

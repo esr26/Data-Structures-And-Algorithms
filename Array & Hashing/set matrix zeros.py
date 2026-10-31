@@ -1,8 +1,12 @@
+from typing import List
+
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
         """
         Do not return anything, modify matrix in-place instead.
         """
+        if not matrix or not matrix[0]:
+            return
 
         rows = set()
         cols = set()
@@ -19,6 +23,4 @@ class Solution:
             for c in range(n):
                 if r in rows or c in cols:
                     matrix[r][c]= 0
-        
-        return matrix
         

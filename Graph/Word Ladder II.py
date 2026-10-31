@@ -1,3 +1,5 @@
+from collections import defaultdict, deque
+
 class Solution:
     def findLadders(self, beginWord: str, endWord: str, wordList: list[str]) -> list[list[str]]:
 

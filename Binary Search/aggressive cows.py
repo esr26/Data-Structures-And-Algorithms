@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def aggressiveCows(self, stalls: List[int], k: int) -> int:
 

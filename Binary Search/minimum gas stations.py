@@ -1,5 +1,11 @@
+import math
+
+from typing import List
+
 class Solution:
     def minmaxGasDist(self, stations: List[int], k: int) -> float:
+        if len(stations) < 2:
+            return 0.0
 
         left = 0.0
         right = max(stations[i] - stations[i - 1]
@@ -22,5 +28,3 @@ class Solution:
                 left = mid
 
         return right
-
-    
