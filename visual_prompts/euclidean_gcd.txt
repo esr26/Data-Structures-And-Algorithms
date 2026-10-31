@@ -1,0 +1,16 @@
+Create a clear, precise educational infographic titled "Euclidean greatest common divisor" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to find the largest number dividing two integers.
+
+How It Works
+Example: gcd(18,12)=6.
+1. Set a=18 and b=12.
+2. Replace (a,b) with (b,a mod b), giving (12,6).
+3. Repeat to (6,0).
+4. Return nonzero a=6.
+
+Quick Facts
+O(log min(a,b)) time, O(1) iterative space. Pitfall: handle zeros and negative inputs consistently.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Math/gcd of two numbers.py.

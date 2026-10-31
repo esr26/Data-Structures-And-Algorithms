@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Grid flood fill and island traversal" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use DFS or BFS to find connected regions of cells.
+
+How It Works
+Example: Grid [[1,0],[1,1]] has one 4-direction island.
+1. Scan for an unvisited land cell.
+2. Start DFS or BFS there.
+3. Check only in-bounds neighbors in the allowed directions.
+4. Mark each land cell visited.
+5. Count one component and resume scanning.
+
+Quick Facts
+O(mn) time, O(mn) worst-case space. Pitfall: 4- and 8-neighbor rules produce different components.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Number of Islands.py.

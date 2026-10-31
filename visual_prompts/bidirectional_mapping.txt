@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Two-way character mapping" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to test whether two sequences have a one-to-one correspondence.
+
+How It Works
+Example: 'egg' maps to 'add' with e->a and g->d.
+1. Walk characters in parallel.
+2. Record the forward mapping e->a.
+3. Record the reverse mapping a->e.
+4. Check every later pair against both maps.
+5. Reject any mismatch or collision.
+
+Quick Facts
+O(n) expected time, O(k) map space. Pitfall: one-way mapping permits two source symbols to map to one target.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Strings/isomorphic-strings.py.

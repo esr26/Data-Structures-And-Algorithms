@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Stack simulation of collisions" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when only a recent survivor can interact with the next moving item.
+
+How It Works
+Example: Asteroids [5,10,-5] leave [5,10].
+1. Scan asteroids left to right.
+2. Push right-moving 5 and 10.
+3. Incoming -5 meets top 10.
+4. Discard -5 because 10 is larger.
+5. Keep prior survivors.
+
+Quick Facts
+O(n) time, O(n) space. Pitfall: only a right-mover before a left-mover can collide.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Stacks/asteroid collision.py.

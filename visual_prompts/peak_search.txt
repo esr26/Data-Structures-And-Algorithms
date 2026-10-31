@@ -1,0 +1,16 @@
+Create a clear, precise educational infographic titled "Binary search for a peak" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when comparing neighboring values reveals an uphill direction toward a peak.
+
+How It Works
+Example: For [1,3,2], index 1 is a peak.
+1. Check middle and its right neighbor.
+2. If rising, keep the right half.
+3. Otherwise keep the left half including middle.
+4. When low equals high, return that peak.
+
+Quick Facts
+O(log n) time, O(1) space. Pitfall: compare within bounds and know whether strict peaks are required.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Binary Search/find peak element.py.

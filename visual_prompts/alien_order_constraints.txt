@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Infer character order then topologically sort" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to recover a valid alphabet order from already sorted words.
+
+How It Works
+Example: Words ['ab','ac'] imply b precedes c.
+1. Include every observed character as a graph node.
+2. Compare neighboring words at their first differing character.
+3. Add precedence edge b->c, avoiding duplicates.
+4. Reject an invalid longer-before-prefix pair.
+5. Topologically sort characters and detect cycles.
+
+Quick Facts
+O(total characters + alphabet edges) time, O(alphabet size + edges) space. Pitfall: only first differing characters create a constraint.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Alien Dictionary.py.

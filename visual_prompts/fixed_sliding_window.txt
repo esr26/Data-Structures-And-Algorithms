@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Fixed-size sliding window" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when every candidate segment has a fixed length k.
+
+How It Works
+Example: For [1,4,2,3] and k=2, window sums are 5,6,5.
+1. Sum the first k values.
+2. Record that first window.
+3. Move right one step: add the entering value.
+4. Subtract the leaving value.
+5. Update the answer for each window.
+
+Quick Facts
+O(n) time, O(1) space for numeric aggregates. Pitfall: form the first complete window before sliding.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Sliding Window/contains duplicate ii.py.

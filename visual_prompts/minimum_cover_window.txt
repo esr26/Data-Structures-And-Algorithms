@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Minimum covering substring window" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to find the shortest substring containing all required characters with multiplicity.
+
+How It Works
+Example: In 'ADOBECODEBANC' covering 'ABC', answer is 'BANC'.
+1. Expand right, counting required characters.
+2. When all needs are met, record the window.
+3. Move left while coverage remains valid.
+4. Restore a missing requirement when left moves too far.
+5. Continue and keep the shortest valid window.
+
+Quick Facts
+O(n) time, O(k) map space. Pitfall: repeated required characters demand counts, not set membership.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Sliding Window/minimum-window-substring.py.

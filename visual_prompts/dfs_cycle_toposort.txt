@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "DFS cycle detection and topological ordering" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use for dependency graphs when recursive state can expose back edges.
+
+How It Works
+Example: A->B->C->A is a cycle, so no topological order exists.
+1. Mark A as visiting.
+2. Follow A->B and mark B visiting.
+3. Follow B->C and mark C visiting.
+4. C reaches visiting A, proving a cycle.
+5. For acyclic nodes, append on exit and reverse.
+
+Quick Facts
+O(V+E) time, O(V) recursion/state space. Pitfall: visiting and fully processed are distinct states.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Course Schedule.py.

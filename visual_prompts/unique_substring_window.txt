@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Longest substring without repeats" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when each character may occur at most once in a moving window.
+
+How It Works
+Example: For 'abca', longest unique substring length is 3.
+1. Expand right and track last-seen positions.
+2. When a duplicate enters, move left beyond its prior index.
+3. Never move left backward.
+4. Update longest window length.
+5. For 'abca', best remains 'abc'.
+
+Quick Facts
+O(n) time, O(k) character map space. Pitfall: old occurrences outside the window must not shrink it.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Sliding Window/longest-substring-without-repeating-characters.py.

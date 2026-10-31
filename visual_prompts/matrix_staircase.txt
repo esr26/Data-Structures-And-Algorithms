@@ -1,0 +1,16 @@
+Create a clear, precise educational infographic titled "Staircase search in sorted matrix" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when rows and columns are sorted and each comparison can eliminate a row or column.
+
+How It Works
+Example: Find 5 in [[1,4],[3,5]].
+1. Start at the top-right value 4.
+2. Target 5 is larger, so move down.
+3. Read 5 and stop.
+4. If target were smaller, move left.
+
+Quick Facts
+O(m+n) time, O(1) space. Pitfall: this differs from binary searching a globally flattened matrix.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Binary Search/Search a 2D Matrix II.py.

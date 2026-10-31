@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Binary search on sorted order" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when a monotonic order lets one half be discarded after each comparison.
+
+How It Works
+Example: Find 7 in [1,3,5,7,9].
+1. Set low=0 and high=4.
+2. Check middle value 5.
+3. Since 7 is larger, move low past the middle.
+4. Check 7 and return its index.
+5. Stop if the interval becomes empty.
+
+Quick Facts
+O(log n) time, O(1) space. Pitfall: update bounds so the interval strictly shrinks.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Binary Search/binary search.py.

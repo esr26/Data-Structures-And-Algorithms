@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Shortest paths in a DAG" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use weighted shortest paths in a directed acyclic graph, even with negative edges.
+
+How It Works
+Example: A->B cost 2, A->C cost 5, B->C cost 1: A to C costs 3.
+1. Find a topological order.
+2. Set source distance to 0 and others to infinity.
+3. Process nodes in that order.
+4. Relax outgoing edges once each.
+5. Update C via B to cost 3.
+
+Quick Facts
+O(V+E) time, O(V) space. Pitfall: only works when the graph is acyclic.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Shorted Path in DAG.py.

@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Merge sort" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use stable divide-and-conquer sorting or sorting linked-style streams.
+
+How It Works
+Example: Sort [3,1,2] by merging [1] and [2] then [3].
+1. Split the list into halves.
+2. Recursively sort each half.
+3. Compare front elements of both halves.
+4. Emit the smaller and advance.
+5. Append the remainder.
+
+Quick Facts
+O(n log n) time, O(n) auxiliary space for arrays. Pitfall: copy remaining elements after one side empties.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Sorting/merge sort.py.

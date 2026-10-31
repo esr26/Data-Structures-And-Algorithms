@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Read/write pointer compaction" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to remove or move elements in place while retaining the wanted order.
+
+How It Works
+Example: Move zeroes in [0,1,0,3] to get [1,3,0,0].
+1. Keep write at the next nonzero slot.
+2. Scan each value with read.
+3. Copy 1 and 3 to write positions, advancing write.
+4. Fill remaining slots with zero.
+5. Return or inspect the changed array.
+
+Quick Facts
+O(n) time, O(1) space. Pitfall: clarify whether order must be stable.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Two Pointers/move zeros to end.py.

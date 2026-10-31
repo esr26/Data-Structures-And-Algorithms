@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Trapping rainwater with boundary maxima" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to sum water trapped between elevation bars.
+
+How It Works
+Example: For [2,0,2], the middle traps 2 units.
+1. Set pointers at both ends and track left/right maxima.
+2. Advance the side with the smaller boundary.
+3. Update its maximum.
+4. Add max minus current height when below that maximum.
+5. Continue until pointers cross.
+
+Quick Facts
+O(n) time, O(1) space. Pitfall: water depends on the smaller enclosing maximum.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Two Pointers/trapping rain water.py.

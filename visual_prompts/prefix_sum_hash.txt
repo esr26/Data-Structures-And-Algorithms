@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Prefix sum with hash map" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to count subarrays with a target sum, including negative numbers.
+
+How It Works
+Example: In [1,2,1], target 3: [1,2] and [2,1].
+1. Start running sum 0 with frequency {0:1}.
+2. Add 1 and look for sum minus 3.
+3. Add 2; matching prior sum 0 finds [1,2].
+4. Add 1; matching prior sum 1 finds [2,1].
+5. Update frequencies after each lookup.
+
+Quick Facts
+O(n) expected time, O(n) space. Pitfall: seed sum 0 and use counts, not a single index, when counting.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/subarray sum equals k.py.

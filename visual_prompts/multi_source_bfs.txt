@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Multi-source breadth-first search" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when several starting cells or vertices spread simultaneously.
+
+How It Works
+Example: Line cells 0,1,2 with sources at 0 and 2: middle distance is 1.
+1. Enqueue every source with distance 0.
+2. Mark sources visited.
+3. Process the queue by layers.
+4. Set each unseen neighbor to parent distance+1.
+5. Middle cell first receives distance 1.
+
+Quick Facts
+O(V+E) time, O(V) space. Pitfall: enqueue all sources before expansion.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Multi-Source BFS Shortest Distance.py.

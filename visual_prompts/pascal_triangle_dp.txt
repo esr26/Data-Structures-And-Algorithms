@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Pascal triangle row recurrence" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to generate binomial-coefficient rows from earlier rows.
+
+How It Works
+Example: Rows start [1], [1,1], then [1,2,1].
+1. Create first row [1].
+2. For each new row, put 1 at both ends.
+3. Fill interior position j from two parents above.
+4. For row 3, add 1+1 to get middle 2.
+5. Repeat to requested row count.
+
+Quick Facts
+O(r²) time and O(r²) output space for r rows. Pitfall: only interior entries have two parents.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/pascal's triangle.py.

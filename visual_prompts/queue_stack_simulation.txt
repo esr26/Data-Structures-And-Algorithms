@@ -1,0 +1,16 @@
+Create a clear, precise educational infographic titled "Stack and queue simulation" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to implement one linear interface with the other data structure.
+
+How It Works
+Example: Push 1 then 2 into a queue-backed stack; pop returns 2.
+1. Insert the new value into the queue.
+2. Rotate older values behind it.
+3. The front is now the latest value.
+4. Pop from front to mimic stack behavior.
+
+Quick Facts
+Push O(n) and pop O(1) for this queue rotation method; O(n) space. Pitfall: state which operation bears the cost.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Stacks/implement-stack-using-queues.py.

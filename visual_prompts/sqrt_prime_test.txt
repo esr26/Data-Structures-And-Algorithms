@@ -1,0 +1,16 @@
+Create a clear, precise educational infographic titled "Prime test up to square root" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to decide whether an integer has a nontrivial factor.
+
+How It Works
+Example: 29 is prime because no divisor 2 through 5 divides it.
+1. Reject values below 2.
+2. Test candidate divisors from 2 upward.
+3. Stop when divisor squared exceeds 29.
+4. If none divides evenly, return prime.
+
+Quick Facts
+O(sqrt n) time, O(1) space. Pitfall: 1 is not prime.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Math/check prime number.py.

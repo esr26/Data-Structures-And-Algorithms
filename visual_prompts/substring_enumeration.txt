@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Enumerate substrings with incremental counts" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when a score must be calculated for every substring and can update as the end extends.
+
+How It Works
+Example: For 'aba', substring 'ab' has counts a:1,b:1 and score max-min=0.
+1. Choose each start index.
+2. Reset frequency counts.
+3. Extend the end index one character at a time.
+4. Update only the new character's count.
+5. Compute the score and add it to the total.
+
+Quick Facts
+O(n²·k) time when each score scans k character counts; O(k) space. Pitfall: reset counts for each new start.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Strings/sum of beauty of all subtrings.py.

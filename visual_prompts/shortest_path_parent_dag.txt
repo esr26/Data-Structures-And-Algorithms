@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "BFS parent DAG plus path backtracking" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to enumerate all shortest transformation paths in an unweighted state graph.
+
+How It Works
+Example: A connects to B and C, both to D: shortest paths are A-B-D and A-C-D.
+1. Run BFS by levels from A.
+2. For D, record both shortest-level parents B and C.
+3. Stop after finishing the first level that reaches D.
+4. Backtrack from D through recorded parents.
+5. Reverse each path to output both shortest paths.
+
+Quick Facts
+BFS O(V+E) plus output-sensitive path enumeration; parent storage O(E). Pitfall: delay level visitation updates so equal-length parents survive.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Word Ladder II.py.

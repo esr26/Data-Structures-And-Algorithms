@@ -1,0 +1,16 @@
+Create a clear, precise educational infographic titled "Binary search in timestamped values" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to retrieve the newest stored value at or before a query time.
+
+How It Works
+Example: Records (1,'a'), (4,'b'); query 3 returns 'a'.
+1. Append timestamped values in increasing order.
+2. Binary search for first time greater than query.
+3. Step back one record.
+4. Return its value, or empty if none exists.
+
+Quick Facts
+O(log n) query per key, O(n) storage. Pitfall: insertion timestamps must stay sorted.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Binary Search/time based key value search.py.

@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Quicksort partitioning" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use an in-place comparison sort where average speed is useful.
+
+How It Works
+Example: Sort [3,1,2] around pivot 2 into [1,2,3].
+1. Choose a pivot.
+2. Partition values less and greater around it.
+3. Place pivot in its final position.
+4. Recursively sort left and right partitions.
+5. Combine implicitly in place.
+
+Quick Facts
+Average O(n log n), worst O(n²); recursion O(log n) average, O(n) worst. Pitfall: poor pivots on ordered input.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Sorting/quick sort.py.

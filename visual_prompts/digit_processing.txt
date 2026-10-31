@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Digit extraction by modulo and division" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use for integer reversal, palindrome tests, and digit-power sums.
+
+How It Works
+Example: Reverse 123 to 321.
+1. Set result to zero.
+2. Take last digit 123 mod 10 = 3.
+3. Append it with result*10+digit.
+4. Remove the digit using integer division.
+5. Repeat for remaining 2 and 1.
+
+Quick Facts
+O(d) time for d digits, O(1) space. Pitfall: sign and overflow rules vary by problem.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Math/reverse integer.py.

@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Topological dynamic programming" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use prerequisite DAGs where the answer is earliest finish or longest weighted chain.
+
+How It Works
+Example: A duration 2 precedes B duration 3: B finishes at time 5.
+1. Topologically process zero-indegree courses.
+2. Set A's finish to its duration 2.
+3. Propagate finish[A]+duration[B] to B.
+4. Take max when B has multiple prerequisites.
+5. Return the maximum finish time.
+
+Quick Facts
+O(V+E) time, O(V) state space. Pitfall: take max over prerequisites, not sum, when tasks can run in parallel.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Parallel Courses III.py.

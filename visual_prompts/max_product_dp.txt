@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Maximum product subarray" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when negative values can flip the best product into the worst and back.
+
+How It Works
+Example: For [2,3,-2,4], maximum product is 6.
+1. Track both the maximum and minimum product ending here.
+2. At 3, maximum becomes 6.
+3. At -2, consider products from both previous extremes.
+4. Update the global maximum at every step.
+5. Return 6.
+
+Quick Facts
+O(n) time, O(1) space. Pitfall: compute new min and max from old values before overwriting.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/maximum product subarray.py.

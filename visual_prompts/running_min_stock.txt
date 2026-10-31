@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "One-pass running minimum" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when a later value is compared with the lowest earlier value.
+
+How It Works
+Example: Prices [7,1,5,3] give max profit 4 from 1 to 5.
+1. Start minimum price at 7.
+2. At 1, update the minimum.
+3. At 5, compute profit 5-1=4.
+4. At 3, compare profit with best.
+5. Return the maximum nonnegative profit.
+
+Quick Facts
+O(n) time, O(1) space. Pitfall: sale must occur after purchase.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Sliding Window/best-time-to-buy-and-sell-stock.py.

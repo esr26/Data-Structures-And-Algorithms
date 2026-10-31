@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Bellman-Ford relaxation" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use single-source shortest paths with possible negative weights and negative-cycle detection.
+
+How It Works
+Example: A->B cost 4, A->C cost 5, B->C cost -2: best A to C is 2.
+1. Set source distance 0.
+2. Relax every edge for V-1 rounds.
+3. B becomes 4 then C improves to 2 via B.
+4. Run one more edge pass.
+5. If any value improves, a reachable negative cycle exists.
+
+Quick Facts
+O(VE) time, O(V) distance space. Pitfall: only reachable negative cycles matter for a source query.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Bellman-Ford Algorithm.py.

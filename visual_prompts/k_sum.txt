@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Sorted k-sum with two-pointer base case" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use for unique 3-sum or 4-sum combinations.
+
+How It Works
+Example: For [-1,0,1,2], target 0, triple -1,0,1 works.
+1. Sort the values.
+2. Fix the first value and recurse or fix more values.
+3. Solve the final 2-sum with opposite pointers.
+4. Skip duplicate fixed and pointer values.
+5. Collect unique combinations.
+
+Quick Facts
+Typical 3-sum O(n²), 4-sum O(n³); output space varies. Pitfall: duplicate skipping must occur at each level.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Two Pointers/3_sum.py.

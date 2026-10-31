@@ -1,0 +1,16 @@
+Create a clear, precise educational infographic titled "Divisor enumeration to square root" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to list all divisors without testing every number through n.
+
+How It Works
+Example: Divisors of 12 include pairs (1,12), (2,6), (3,4).
+1. Test i from 1 through floor(sqrt 12).
+2. When 12 mod i is zero, add i.
+3. Add paired divisor 12/i if different.
+4. Sort results if ordered output is required.
+
+Quick Facts
+O(sqrt n) tests; output storage O(number of divisors). Pitfall: do not duplicate square-root divisor for perfect squares.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Math/print all divisors of a number.py.

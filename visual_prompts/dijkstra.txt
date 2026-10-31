@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Dijkstra's shortest path" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use minimum total edge weight paths when all weights are nonnegative.
+
+How It Works
+Example: A->B cost 2, A->C cost 5, B->C cost 1: shortest A to C is 3.
+1. Initialize source distance 0, others infinity.
+2. Pop the smallest tentative distance from a min-heap.
+3. Skip stale heap entries.
+4. Relax each outgoing edge using current cost plus edge weight.
+5. When C is finalized, its distance is 3.
+
+Quick Facts
+O((V+E) log V) time with heap, O(V+E) storage. Pitfall: negative edges invalidate the greedy finalization.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Dijikstra Algorithm.py.

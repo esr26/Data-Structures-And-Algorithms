@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Search in a rotated sorted array" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when an ascending array was rotated once and one side remains sorted.
+
+How It Works
+Example: Find 1 in [4,5,1,2,3].
+1. Inspect middle element.
+2. Determine which half is sorted.
+3. Check whether target lies in that sorted half.
+4. Discard the other half.
+5. Repeat until found or empty.
+
+Quick Facts
+O(log n) with distinct values; duplicates can force O(n). Pitfall: duplicate ends obscure the sorted-half test.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Binary Search/search-in-rotated-sorted-array.py.

@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Minimax Dijkstra for path effort" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when a path's cost is its largest edge cost, not the sum.
+
+How It Works
+Example: Heights [1,3,2] along a path have edge gaps 2 and 1, so effort is 2.
+1. Start effort at 0.
+2. Pop the lowest effort cell.
+3. For an edge, set new effort=max(current effort, edge gap).
+4. Relax only if this improves the neighbor.
+5. Return when destination is popped.
+
+Quick Facts
+O(E log V) time and O(V) distance/heap space, with graph representation overhead. Pitfall: using only the latest edge gap loses prior bottlenecks.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Path With Minimum Effort.py.

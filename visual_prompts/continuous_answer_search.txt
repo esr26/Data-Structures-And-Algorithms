@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Binary search over a real-valued answer" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when a continuous threshold is monotonic and an approximate answer is accepted.
+
+How It Works
+Example: Between stations at 0 and 10, one new station yields maximum gap 5.
+1. Choose low/high bounds for the maximum allowed gap.
+2. For middle gap d, count required extra stations.
+3. If count exceeds budget, raise d.
+4. Otherwise lower d.
+5. Stop at required precision.
+
+Quick Facts
+O(n log(R/epsilon)) time, O(1) extra space. Pitfall: exact multiples need careful station-count math.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Binary Search/minimum gas stations.py.

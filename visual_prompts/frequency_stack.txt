@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Maximum-frequency stack" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when pop should return the most frequent value, breaking ties by recency.
+
+How It Works
+Example: Push 5,7,5; pop returns 5.
+1. Track frequency of each value.
+2. Place each push in a bucket for its new frequency.
+3. Track the highest active frequency.
+4. Pop the newest value from that bucket.
+5. Reduce its frequency and highest bucket if empty.
+
+Quick Facts
+O(1) average per operation, O(n) space. Pitfall: tie-breaking is most recent among equal frequencies.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Stacks/maximum-frequency-stack.py.

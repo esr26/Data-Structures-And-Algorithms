@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Expand around palindrome centers" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to find palindromic substrings by symmetry around a center.
+
+How It Works
+Example: In 'babad', 'bab' is a longest palindrome.
+1. Try each character as an odd-length center.
+2. Also try each gap as an even-length center.
+3. Expand while both outer characters match.
+4. Record the longest span seen.
+5. Return its substring.
+
+Quick Facts
+O(n²) time, O(1) extra space. Pitfall: include both odd and even centers.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Strings/longest-palindromic-substring.py.

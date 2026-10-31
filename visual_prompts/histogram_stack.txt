@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Largest rectangle in histogram" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to find the widest span where each bar can be the minimum height.
+
+How It Works
+Example: Bars [2,1,2] have maximum rectangle area 3.
+1. Keep indices of increasing bar heights.
+2. At shorter height 1, pop height 2 and compute its width.
+3. Push the new bar.
+4. At the end, pop remaining bars using a zero sentinel.
+5. Track maximum area 3.
+
+Quick Facts
+O(n) time, O(n) space. Pitfall: compute width from the new stack top after a pop.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Stacks/largest rectangle histogram.py.

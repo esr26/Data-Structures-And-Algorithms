@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Frequency-controlled string window" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use for permutations or longest substring with limited replacements.
+
+How It Works
+Example: Find an anagram of 'ab' inside 'eidbaooo': substring 'ba'.
+1. Count required characters of 'ab'.
+2. Move a length-2 window over the text.
+3. Add the entering character and remove the leaving one.
+4. Compare window counts with target counts.
+5. Report the matching 'ba'.
+
+Quick Facts
+O(n) time with fixed alphabet; O(k) frequency space. Pitfall: keep counts in sync at both window boundaries.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Sliding Window/permutation string.py.

@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Kahn's topological sort" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to order a directed acyclic graph by prerequisites.
+
+How It Works
+Example: With A->B and A->C, A must appear before B and C.
+1. Count indegrees.
+2. Enqueue all zero-indegree nodes, starting with A.
+3. Remove A and emit it.
+4. Decrease B and C indegrees.
+5. Enqueue newly zero nodes and finish.
+
+Quick Facts
+O(V+E) time, O(V) space. Pitfall: fewer than V emitted nodes signals a directed cycle.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Course Schedule II.py.

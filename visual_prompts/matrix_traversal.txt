@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Directional matrix traversal" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when grid cells must be visited in a specified order, such as a spiral.
+
+How It Works
+Example: Spiral of [[1,2],[3,4]] is 1,2,4,3.
+1. Set top, bottom, left, and right boundaries.
+2. Traverse the top row left to right.
+3. Traverse the right column downward.
+4. If bounds remain, traverse bottom and left.
+5. Move boundaries inward and repeat.
+
+Quick Facts
+O(mn) time, O(1) extra space besides output. Pitfall: check bounds before bottom/left passes.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/spiral matrix.py.

@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Merge overlapping intervals" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when ranges can overlap and must be combined.
+
+How It Works
+Example: Merge [1,3] and [2,4] into [1,4].
+1. Sort intervals by start.
+2. Start the output with [1,3].
+3. Compare [2,4] to the last merged end.
+4. Extend the end to 4 on overlap.
+5. Append intervals that do not overlap.
+
+Quick Facts
+O(n log n) time for sorting, O(n) output space. Pitfall: decide whether touching endpoints count as overlap.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/merge intervals.py.

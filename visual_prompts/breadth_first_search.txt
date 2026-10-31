@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Breadth-first search" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use for shortest path lengths in an unweighted graph.
+
+How It Works
+Example: Edges A-B and B-C: distance A to C is 2.
+1. Put A in a queue at distance 0.
+2. Remove A and enqueue B at distance 1.
+3. Remove B and enqueue C at distance 2.
+4. Mark nodes when enqueued.
+5. Return 2 for C.
+
+Quick Facts
+O(V+E) time, O(V) space. Pitfall: BFS distances assume equal edge cost.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Iterative BFS.py.

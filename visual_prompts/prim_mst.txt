@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Prim's minimum spanning tree" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to connect all vertices of a weighted undirected graph at minimum total cost.
+
+How It Works
+Example: Triangle AB=1, BC=2, AC=4: MST cost is 3.
+1. Start from A with cost 0.
+2. Push candidate incident edges into a min-heap.
+3. Take smallest edge reaching an unvisited vertex: AB.
+4. Next take BC.
+5. Stop after every vertex joins the tree.
+
+Quick Facts
+O(E log V) time with a heap, O(V+E) storage. Pitfall: skipping visited vertices prevents cycles; disconnected graphs lack a full MST.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Prim's Algorithm.py.

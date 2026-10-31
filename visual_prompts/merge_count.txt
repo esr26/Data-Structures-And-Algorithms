@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Merge sort with cross-pair counting" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to count inversions or reverse pairs while sorting.
+
+How It Works
+Example: For [3,1,2], inversions are (3,1) and (3,2): total 2.
+1. Split into sorted halves.
+2. Count pairs inside each half recursively.
+3. During merge, count cross pairs before merging.
+4. Merge halves into sorted order.
+5. Add all counts.
+
+Quick Facts
+O(n log n) time, O(n) space. Pitfall: inversion and reverse-pair inequalities differ.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/count inversion.py.

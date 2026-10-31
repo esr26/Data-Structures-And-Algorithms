@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "String rotation via concatenation" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to test whether one equal-length string is a cyclic rotation of another.
+
+How It Works
+Example: 'bca' is a rotation of 'abc' because it appears in 'abcabc'.
+1. Confirm equal lengths.
+2. Concatenate source with itself: abcabc.
+3. Search the doubled string for bca.
+4. Return true if found.
+5. Reject unequal lengths even if a substring happens to match.
+
+Quick Facts
+Search time depends on substring algorithm; O(n) extra for doubled text. Pitfall: length equality is required.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Strings/rotate string.py.

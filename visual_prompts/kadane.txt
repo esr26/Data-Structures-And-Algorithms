@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Kadane's maximum subarray" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use for the maximum sum of a nonempty contiguous subarray.
+
+How It Works
+Example: For [-2,1,-3,4,-1,2], best is [4,-1,2] with sum 5.
+1. Start current and best at the first value.
+2. At each value, choose it alone or extend current.
+3. For 4, restart because the prior sum hurts.
+4. Extend through -1 and 2 to reach 5.
+5. Return the best seen.
+
+Quick Facts
+O(n) time, O(1) space. Pitfall: initialize from the first element so all-negative arrays work.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/maximum subarray sum (Kadane's Algo).py.

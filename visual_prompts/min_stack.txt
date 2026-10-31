@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Stack with running minimum" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when push, pop, top, and minimum must be fast.
+
+How It Works
+Example: Push 3, then 1: minimum is 1; pop: minimum is 3.
+1. Maintain the ordinary value stack.
+2. Maintain a minimum alongside each depth or in a second stack.
+3. Push 3 with min 3.
+4. Push 1 with min 1.
+5. Pop 1 and reveal min 3.
+
+Quick Facts
+O(1) per operation, O(n) space. Pitfall: repeated minima must survive one pop.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Stacks/min-stack.py.

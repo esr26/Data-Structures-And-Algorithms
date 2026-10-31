@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Prefix XOR with hash map" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to count or find subarrays whose XOR equals a target.
+
+How It Works
+Example: In [4,2,2], target 6: [4,2] is one match.
+1. Seed prefix XOR 0 in the frequency map.
+2. XOR 4 into the running value.
+3. XOR 2; running XOR 6 matches prior XOR 0.
+4. For every position, look up running XOR XOR target.
+5. Update the map after counting matches.
+
+Quick Facts
+O(n) expected time, O(n) space. Pitfall: XOR cancellation differs from subtraction.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/count subarrays with xor equals target.py.

@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Tarjan low-link bridges" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to find edges whose removal disconnects an undirected graph.
+
+How It Works
+Example: Chain A-B-C has bridge edges A-B and B-C.
+1. DFS and assign discovery times.
+2. Track the earliest reachable discovery time low[u].
+3. Return low values from child subtrees.
+4. For tree edge u-v, if low[v] > disc[u], mark a bridge.
+5. Skip only the parent edge when exploring.
+
+Quick Facts
+O(V+E) time, O(V) auxiliary space. Pitfall: back edges must update low using discovery time.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Critical Connections in a Network.py.

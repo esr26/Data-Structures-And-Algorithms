@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Dutch national flag partition" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to sort arrays containing only 0, 1, and 2 in place.
+
+How It Works
+Example: Transform [2,0,1] into [0,1,2].
+1. Place low at left, mid at left, high at right.
+2. At mid=2, swap with high and decrease high.
+3. At mid=1, advance mid.
+4. At mid=0, swap with low and advance both.
+5. Stop when mid passes high.
+
+Quick Facts
+O(n) time, O(1) space. Pitfall: after swapping a 2, inspect the new mid value again.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/sort colors.py.

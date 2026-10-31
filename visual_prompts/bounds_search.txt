@@ -1,0 +1,16 @@
+Create a clear, precise educational infographic titled "Lower and upper bound search" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to find insertion points, first/last occurrence, or count duplicates.
+
+How It Works
+Example: In [1,2,2,2,4], lower bound of 2 is 1 and upper bound is 4.
+1. Find the first index with value >= target.
+2. Find the first index with value > target.
+3. Subtract indices to count occurrences.
+4. Check the lower-bound value to confirm presence.
+
+Quick Facts
+O(log n) time, O(1) space. Pitfall: keep half-open interval rules consistent.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Binary Search/find first and last occurence.py.

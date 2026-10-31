@@ -1,0 +1,16 @@
+Create a clear, precise educational infographic titled "Index placement for missing values" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when values fall in a known index range and in-place marking is allowed.
+
+How It Works
+Example: In [3,4,-1,1], first missing positive is 2.
+1. For each position, move valid value x to index x-1.
+2. Continue until the current value is invalid or already placed.
+3. Scan indices from left to right.
+4. The first index without value index+1 gives the answer.
+
+Quick Facts
+O(n) time, O(1) extra space. Pitfall: guard duplicates to avoid endless swaps.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/first missing positive integer.py.

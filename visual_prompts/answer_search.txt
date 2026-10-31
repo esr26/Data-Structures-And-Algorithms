@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Binary search on a feasible answer" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when a candidate answer is feasible above or below a threshold monotonically.
+
+How It Works
+Example: For piles [3,6] and 3 hours, minimum speed is 3.
+1. Choose low and high candidate speeds.
+2. Test a middle speed by summing ceiling divisions.
+3. If hours fit, search smaller speeds.
+4. Otherwise search larger speeds.
+5. Return the first feasible speed.
+
+Quick Facts
+O(n log R) time for n items and answer range R; O(1) extra space. Pitfall: prove monotonicity and round divisions correctly.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Binary Search/koko eating bananas.py.

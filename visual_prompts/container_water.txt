@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Two-pointer container area" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to maximize width times the shorter of two boundary heights.
+
+How It Works
+Example: For heights [1,3,2,4], endpoints 3 and 4 enclose area 6.
+1. Start pointers at both ends.
+2. Compute width times minimum endpoint height.
+3. Record the best area.
+4. Move the pointer at the shorter height inward.
+5. Repeat until pointers meet.
+
+Quick Facts
+O(n) time, O(1) space. Pitfall: moving the taller side cannot improve the current height limit.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Two Pointers/container with most water.py.

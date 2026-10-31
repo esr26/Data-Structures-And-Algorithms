@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Stack-based nested parsing" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when closing tokens must match the latest opening token, or nested text must be decoded.
+
+How It Works
+Example: For '([])', each closer matches the top opener.
+1. Push opening tokens.
+2. On a closing token, compare it with the stack top.
+3. Pop only a valid match.
+4. Reject a mismatch or an empty stack.
+5. Accept when no openers remain.
+
+Quick Facts
+O(n) time, O(n) space. Pitfall: stack must be empty at the end.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Stacks/valid-parentheses.py.

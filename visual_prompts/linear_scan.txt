@@ -1,0 +1,16 @@
+Create a clear, precise educational infographic titled "Linear scan with running state" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use for one pass array checks, extrema, and running counts.
+
+How It Works
+Example: Find the maximum in [3,1,4]: result 4.
+1. Initialize best=3.
+2. Compare 1 and keep 3.
+3. Compare 4 and update best=4.
+4. Return 4.
+
+Quick Facts
+O(n) time, O(1) extra space. Pitfall: choose the correct initial value and handle empty input.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/find second largest and smallest.py.

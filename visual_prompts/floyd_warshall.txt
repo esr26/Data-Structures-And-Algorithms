@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Floyd-Warshall all-pairs shortest paths" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use for shortest distance between every pair in a small graph.
+
+How It Works
+Example: A->B cost 2, B->C cost 3, A->C cost 8: A to C improves to 5.
+1. Initialize a distance matrix with direct edges and zero diagonals.
+2. Choose A, then B, then C as allowed intermediate nodes.
+3. For each pair i,j, test route i->k->j.
+4. When k=B, improve A->C from 8 to 5.
+5. Read final pair distances.
+
+Quick Facts
+O(V³) time, O(V²) space. Pitfall: preserve infinity checks and detect negative cycles via negative diagonals.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Floyd-Warshall Algorithm.py.

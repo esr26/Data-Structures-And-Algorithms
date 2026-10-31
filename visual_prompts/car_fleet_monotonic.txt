@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Car fleet arrival-time stack" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when faster cars cannot pass slower cars ahead on a one-way road.
+
+How It Works
+Example: Target 10: car at 6 speed 2 and car at 8 speed 1 both arrive in 2 units, so one fleet.
+1. Sort cars by position, closest to target first.
+2. Compute each solo arrival time.
+3. Compare a trailing car's time to fleet ahead.
+4. If trailing time is no greater, it catches up and merges.
+5. Count surviving fleet times.
+
+Quick Facts
+O(n log n) sorting time, O(n) stack space. Pitfall: compare arrival times in positional order, not original input order.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Stacks/car-fleet.py.

@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Binary search for closest sorted window" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to choose k consecutive values closest to target from a sorted array.
+
+How It Works
+Example: In [1,2,3,4,5], k=2 and x=3, choose [2,3].
+1. A valid answer is a length-k window.
+2. Binary search its start index.
+3. Compare distances x-arr[mid] and arr[mid+k]-x.
+4. Move toward the closer window, honoring tie rule.
+5. Return the selected k values.
+
+Quick Facts
+O(log(n-k)+k) time for search plus output, O(1) extra space. Pitfall: tie-breaking often prefers smaller values.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Sliding Window/find-k-closest-elements.py.

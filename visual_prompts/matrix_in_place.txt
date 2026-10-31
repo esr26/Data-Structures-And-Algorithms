@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "In-place matrix transformations" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to rotate a square matrix or propagate zero rows and columns with constant extra space.
+
+How It Works
+Example: Rotate [[1,2],[3,4]] clockwise to [[3,1],[4,2]].
+1. For rotation, transpose the square matrix.
+2. Reverse each row.
+3. For zeroing, mark affected rows and columns in first row/column.
+4. Apply markers to the interior.
+5. Handle original first row and column separately.
+
+Quick Facts
+O(mn) time; O(1) extra space for marker method. Pitfall: rotation requires a square matrix; preserve first-row flags.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/rotate matrix.py.

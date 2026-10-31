@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Shortest path with an extra state dimension" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when path validity depends on steps, stops, or a resource budget.
+
+How It Works
+Example: A->B cost 2, B->C cost 1, A->C cost 5; with at most one edge, answer is 5.
+1. Define state as (vertex, edges used).
+2. Initialize A at zero edges and cost 0.
+3. Pop a state and relax only if budget permits.
+4. Store separate best costs for different edge counts.
+5. Choose the best valid C state.
+
+Quick Facts
+O(K E log(KV)) heap time and O(KV) state space for K edge counts. Pitfall: one distance per vertex loses viable budget states.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Cheapest Flights Within K Stops.py.

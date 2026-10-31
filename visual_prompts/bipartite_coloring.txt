@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Bipartite graph coloring" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to test whether a graph can be split into two groups with edges only across groups.
+
+How It Works
+Example: Path A-B-C can color A red, B blue, C red.
+1. Start an uncolored component with red.
+2. Give every neighbor the opposite color.
+3. Continue with BFS or DFS.
+4. Reject an edge connecting same-color endpoints.
+5. Repeat for disconnected components.
+
+Quick Facts
+O(V+E) time, O(V) space. Pitfall: odd cycles break bipartiteness.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Bipartite BFS.py.

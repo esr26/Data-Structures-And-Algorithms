@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Binary partition across two sorted arrays" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to find median or kth element without merging arrays.
+
+How It Works
+Example: Median of [1,3] and [2] is 2.
+1. Binary search a cut in the shorter array.
+2. Choose the complementary cut in the other array.
+3. Compare left maxima with opposite right minima.
+4. Move the cut until both cross inequalities hold.
+5. Read the median or kth boundary.
+
+Quick Facts
+O(log min(m,n)) time, O(1) space. Pitfall: handle empty-side sentinels and odd/even totals.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Binary Search/median of two sorted arrays.py.

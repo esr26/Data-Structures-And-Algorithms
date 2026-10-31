@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Depth-first search" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to explore a component, traverse reachable states, or record connected regions.
+
+How It Works
+Example: Graph edges 1-2 and 1-3: DFS from 1 can visit 1,2,3.
+1. Mark start 1 visited.
+2. Choose neighbor 2 and explore it fully.
+3. Backtrack to 1.
+4. Explore neighbor 3.
+5. Repeat for remaining unvisited components.
+
+Quick Facts
+O(V+E) time, O(V) visited and recursion/stack space. Pitfall: mark before recursing or pushing to avoid cycles.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Graph/Recursive DFS.py.

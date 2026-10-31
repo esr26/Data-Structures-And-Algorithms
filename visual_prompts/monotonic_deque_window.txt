@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Sliding-window maximum with monotonic deque" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use for maximum or minimum across every fixed-size window.
+
+How It Works
+Example: For [1,3,-1] and k=2, maxima are [3,3].
+1. Store candidate indices in decreasing-value order.
+2. Remove indices outside the current window.
+3. Remove smaller values from the deque back.
+4. Add the new index.
+5. Read the front as each window's maximum.
+
+Quick Facts
+O(n) time, O(k) space. Pitfall: expire by index and handle equal values consistently.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Sliding Window/sliding-window-maximum.py.

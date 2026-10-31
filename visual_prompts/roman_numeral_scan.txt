@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Roman numeral subtractive scan" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to convert Roman symbols with subtractive pairs into an integer.
+
+How It Works
+Example: 'IV' equals 4, not 6.
+1. Map symbols to values.
+2. Read current and next values.
+3. Subtract current when smaller than next.
+4. Otherwise add current.
+5. Sum to get 4 for IV.
+
+Quick Facts
+O(n) time, O(1) space. Pitfall: subtraction applies only when the smaller value precedes a larger one.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Strings/roman to integer.py.

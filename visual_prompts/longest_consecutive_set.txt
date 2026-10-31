@@ -1,0 +1,17 @@
+Create a clear, precise educational infographic titled "Longest consecutive sequence with a set" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use to find the longest run of consecutive integer values in unsorted input.
+
+How It Works
+Example: In [100,4,200,1,3,2], run 1,2,3,4 has length 4.
+1. Place values in a set.
+2. Start a run only when x-1 is absent.
+3. Walk x+1, x+2, and onward in the set.
+4. Track the longest run.
+5. Return its length.
+
+Quick Facts
+O(n) expected time and O(n) space. Pitfall: starting at every value can become quadratic.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Array & Hashing/longest-consecutive-sequence.py.

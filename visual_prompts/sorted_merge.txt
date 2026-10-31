@@ -1,0 +1,16 @@
+Create a clear, precise educational infographic titled "Merge two sorted sequences" for a Python DSA learner. Use three labeled sections and a small visual trace; do not add unrelated techniques.
+
+When to Use
+Use when two already sorted lists must be combined without sorting from scratch.
+
+How It Works
+Example: Merge [1,4] and [2,3] into [1,2,3,4].
+1. Point to the first item of each list.
+2. Emit the smaller current item.
+3. Advance only that list's pointer.
+4. Append the remaining tail after one list ends.
+
+Quick Facts
+O(m+n) time and O(m+n) output space, or O(1) extra with a suitable in-place buffer. Pitfall: do not omit tails.
+
+Visual direction: clean typography, readable code-like labels, arrows that match the stated example, restrained colors, and enough space for every step. Verify that the example's values and complexity are consistent. Source pattern in repo: Two Pointers/merge_two_sorted arrays.py.
