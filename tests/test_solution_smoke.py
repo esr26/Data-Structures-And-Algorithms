@@ -73,6 +73,15 @@ class SolutionSmokeTests(unittest.TestCase):
         bfs = load("Graph/Iterative BFS.py")["iterative_bfs"]
         self.assertEqual(bfs({"A": ["B", "C"], "B": ["C"]}, "A"), ["A", "B", "C"])
 
+    def test_maximum_probability_path(self):
+        solve = load("Graph/Path With Maximum Probability.py")["Solution"]().maxProbability
+        edges = [[0, 1], [1, 2], [0, 2]]
+        self.assertAlmostEqual(solve(3, edges, [0.5, 0.5, 0.2], 0, 2), 0.25)
+        self.assertAlmostEqual(solve(3, edges, [0.5, 0.5, 0.3], 0, 2), 0.3)
+        self.assertEqual(solve(3, [[0, 1]], [0.5], 0, 2), 0.0)
+        self.assertEqual(solve(2, [[0, 1]], [0.0], 0, 1), 0.0)
+        self.assertEqual(solve(1, [], [], 0, 0), 1.0)
+
     def test_missing_import_regressions(self):
         self.assertEqual(load("Graph/01 Matrix.py")["Solution"]().updateMatrix([[0, 1], [1, 1]]), [[0, 1], [1, 2]])
         self.assertEqual(load("Graph/Print Shortest Path.py")["Solution"]().shortestPath(3, 2, [[1, 2, 2], [2, 3, 3]]), [5, 1, 2, 3])
