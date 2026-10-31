@@ -1,6 +1,6 @@
 # Graph
 
-Use a graph model when entities connect through edges. Match the algorithm to the question: BFS for unweighted shortest paths, DFS for reachability/components, Dijkstra for nonnegative weighted paths, topological sort for dependencies, and MST algorithms for minimum connection cost.
+Use a graph model when entities connect through edges. Match the algorithm to the question: BFS for unweighted shortest paths, DFS for reachability/components, Dijkstra for nonnegative weighted paths or maximum path probability, topological sort for dependencies, and MST algorithms for minimum connection cost.
 
 ## Problem-solving workflow
 
@@ -13,4 +13,4 @@ Use a graph model when entities connect through edges. Match the algorithm to th
 
 **Complexity:** BFS/DFS and topological sort are O(V + E) time and O(V + E) storage with adjacency lists. Heap Dijkstra is O((V + E) log V) time and O(V + E) storage; it requires nonnegative weights. Bellman–Ford is O(VE), Floyd–Warshall O(V³), and Kruskal/Prim-style MSTs typically O(E log V) with appropriate data structures. Grid traversals use V = rows × columns.
 
-**Pitfalls:** Mark visits at the right time; skip stale heap entries; keep extra state when constraints such as stops matter. A path's effort in `Path With Minimum Effort` is the maximum edge difference on that path, so relax with `max(current_effort, edge_difference)`. Check whether a cycle, disconnected graph, or unreachable destination changes the required return value.
+**Pitfalls:** Mark visits at the right time; skip stale heap entries; keep extra state when constraints such as stops matter. A path's effort in `Path With Minimum Effort` is the maximum edge difference on that path, so relax with `max(current_effort, edge_difference)`. For `Path With Maximum Probability`, multiply the current probability by the edge probability and relax only when the product improves the best known value. Check whether a cycle, disconnected graph, or unreachable destination changes the requested return value.

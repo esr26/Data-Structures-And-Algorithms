@@ -102,4 +102,4 @@ Confirmed 83 text files exist; each includes all three section headings and 4–
 
 ## Subsequent addition
 
-The root agent later changed `Array & Hashing/find duplicate number.py` to Floyd cycle detection and added `visual_prompts/floyd_cycle_detection.txt`. The current prompt total is 84.
+The root agent later changed `Array & Hashing/find duplicate number.py` to Floyd cycle detection and added `visual_prompts/floyd_cycle_detection.txt`. The new maximum-probability graph solution added `visual_prompts/maximum_probability_path.txt`. The current prompt total is 85.

@@ -1,0 +1,17 @@
+Create a precise educational infographic titled "Maximum-probability path with a heap" for a Python DSA learner. Use three labeled sections and a small graph trace.
+
+When to Use
+Use when path success is the product of edge probabilities in [0, 1] and the goal is to maximize that product.
+
+How It Works
+Example: edges 0-1 (0.5), 1-2 (0.5), and 0-2 (0.2). The best route from 0 to 2 has probability 0.5 × 0.5 = 0.25.
+1. Build an undirected adjacency list with each edge's probability.
+2. Set the start node's best probability to 1 and all others to 0.
+3. Pop the highest-probability state from a max-heap, skipping stale entries.
+4. Multiply its probability by each outgoing edge probability.
+5. Push a neighbor only when that product improves its best known probability; return when the destination is popped.
+
+Quick Facts
+O((V+E) log V) time and O(V+E) space with an adjacency list and heap. Python's min-heap stores negative probabilities to pop the largest first. An unreachable destination returns 0.
+
+Visual direction: show the 0-1-2 route beside the direct 0-2 edge, mark the two candidate products, and make the heap's next choice clear. Source pattern in repo: Graph/Path With Maximum Probability.py.
