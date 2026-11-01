@@ -82,6 +82,14 @@ class SolutionSmokeTests(unittest.TestCase):
         self.assertEqual(solve(2, [[0, 1]], [0.0], 0, 1), 0.0)
         self.assertEqual(solve(1, [], [], 0, 0), 1.0)
 
+    def test_shortest_alternating_paths(self):
+        solve = load("Graph/Shortest Path With Alternating Colors.py")["Solution"]().shortestAlternatingPaths
+        self.assertEqual(solve(3, [[0, 1], [1, 2]], []), [0, 1, -1])
+        self.assertEqual(solve(3, [[0, 1]], [[1, 2]]), [0, 1, 2])
+        self.assertEqual(solve(4, [[0, 1], [1, 2]], [[0, 1], [1, 3]]), [0, 1, 2, 2])
+        self.assertEqual(solve(3, [[0, 1], [0, 2]], []), [0, 1, 1])
+        self.assertEqual(solve(1, [], []), [0])
+
     def test_missing_import_regressions(self):
         self.assertEqual(load("Graph/01 Matrix.py")["Solution"]().updateMatrix([[0, 1], [1, 1]]), [[0, 1], [1, 2]])
         self.assertEqual(load("Graph/Print Shortest Path.py")["Solution"]().shortestPath(3, 2, [[1, 2, 2], [2, 3, 3]]), [5, 1, 2, 3])
