@@ -1,0 +1,17 @@
+Create a precise educational infographic titled "BFS with alternating edge colors" for a Python DSA learner. Use three labeled sections and a small directed graph trace.
+
+When to Use
+Use when every edge has equal length but the next edge allowed depends on the color of the edge just used.
+
+How It Works
+Example: red edges 0->1 and 1->2; blue edges 0->1 and 1->3. Both colors reach node 1 in one step, and the answers are [0,1,2,2].
+1. Build an adjacency list that keeps each edge's color.
+2. Start BFS with both states (0, red, 0) and (0, blue, 0) so either first-edge color is allowed.
+3. Pop (node, last color, steps) and consider only edges of the opposite color.
+4. Mark (neighbor, arrival color) as visited, because the same node with the other color can lead to different next moves.
+5. Enqueue the neighbor with steps + 1 and set its answer the first time BFS reaches it.
+
+Quick Facts
+O(V+E) time and O(V+E) space for adjacency and two color states per node. Pitfalls: a node-only visited set drops valid paths, and a global step counter gives incorrect BFS distances. Unreachable nodes stay at -1.
+
+Visual direction: use red and blue arrows, show both node-1 arrival states, and draw one queue layer at a time. Source pattern in repo: Graph/Shortest Path With Alternating Colors.py.
