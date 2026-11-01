@@ -1,0 +1,17 @@
+Create a precise educational infographic titled "BFS with an obstacle-elimination budget" for a Python DSA learner. Use three labeled sections and a small grid trace.
+
+When to Use
+Use when every move costs one step but entering an obstacle consumes one of k allowed eliminations.
+
+How It Works
+Example: grid = [[0,0,1],[1,0,1],[1,1,0]], k = 1. Reaching the center with one elimination left allows a four-step path to the goal; reaching it with none left does not.
+1. Put (row 0, column 0, budget k, steps 0) into a FIFO queue.
+2. Treat (row, column, remaining budget) as the visited state, so the same cell can be reached with different budgets.
+3. For each neighbor, calculate a fresh new_budget = current_budget - grid[neighbor].
+4. Only if new_budget is nonnegative and the full state is new, mark it visited and enqueue it at steps + 1.
+5. Return steps when the goal is dequeued; return -1 if the queue empties first.
+
+Quick Facts
+O(rows × columns × (k + 1)) time and space in the worst case. Pitfalls: node-only visited state loses useful paths, mutating the current budget inside the neighbor loop contaminates siblings, and marking invalid states visited corrupts pruning when visits are keyed too broadly.
+
+Visual direction: show two center-cell states with different remaining budgets and their different outcomes. Keep the BFS queue layers and obstacle spending explicit. Source pattern in repo: Graph/Shortest Path in a Grid with Obstacles Elimination.py.
