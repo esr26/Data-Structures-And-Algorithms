@@ -90,6 +90,14 @@ class SolutionSmokeTests(unittest.TestCase):
         self.assertEqual(solve(3, [[0, 1], [0, 2]], []), [0, 1, 1])
         self.assertEqual(solve(1, [], []), [0])
 
+    def test_shortest_path_with_obstacle_elimination(self):
+        solve = load("Graph/Shortest Path in a Grid with Obstacles Elimination.py")["Solution"]().shortestPath
+        self.assertEqual(solve([[0, 0, 0], [1, 1, 0], [0, 0, 0], [0, 1, 1], [0, 0, 0]], 1), 6)
+        self.assertEqual(solve([[0, 1, 1], [1, 1, 1], [1, 0, 0]], 1), -1)
+        self.assertEqual(solve([[0, 0, 1], [1, 0, 1], [1, 1, 0]], 1), 4)
+        self.assertEqual(solve([[0, 1, 0], [1, 1, 0]], 1), 3)
+        self.assertEqual(solve([[0]], 0), 0)
+
     def test_missing_import_regressions(self):
         self.assertEqual(load("Graph/01 Matrix.py")["Solution"]().updateMatrix([[0, 1], [1, 1]]), [[0, 1], [1, 2]])
         self.assertEqual(load("Graph/Print Shortest Path.py")["Solution"]().shortestPath(3, 2, [[1, 2, 2], [2, 3, 3]]), [5, 1, 2, 3])
