@@ -1,38 +1,42 @@
 from collections import defaultdict
+from typing import List
 
 
 class Solution:
     def calcEquation(
         self,
-        equations: list[list[str]],
-        values: list[float],
-        queries: list[list[str]],
-    ) -> list[float]:
-        graph = defaultdict(list)
-        for (numerator, denominator), value in zip(equations, values):
-            graph[numerator].append((denominator, value))
-            graph[denominator].append((numerator, 1.0 / value))
-
-        def dfs(src: str, dst: str, product: float, visited: set[str]) -> float:
-            if src == dst:
+        equations: List[List[str]],
+        values: List[float],
+        queries: List[List[str]],
+    ) -> List[float]:
+        def dfs(node, product):
+            visited.add(node)
+            if node == destination:
                 return product
 
-            visited.add(src)
-            for neighbor, cost in graph[src]:
+            for neighbor, weight in graph[node]:
                 if neighbor in visited:
                     continue
 
-                result = dfs(neighbor, dst, product * cost, visited)
-                if result != -1.0:
-                    return result
+                answer = dfs(neighbor, product * weight)
+                if answer != -1.0:
+                    return answer
 
             return -1.0
 
-        answers = []
-        for src, dst in queries:
-            if src not in graph or dst not in graph:
-                answers.append(-1.0)
-            else:
-                answers.append(dfs(src, dst, 1.0, set()))
+        graph = defaultdict(list)
+        for i, (numerator, denominator) in enumerate(equations):
+            value = values[i]
+            graph[numerator].append((denominator, value))
+            graph[denominator].append((numerator, 1.0 / value))
 
-        return answers
+        result = []
+        for source, destination in queries:
+            visited = set()
+            if source not in graph or destination not in graph:
+                result.append(-1.0)
+                continue
+
+            result.append(dfs(source, 1.0))
+
+        return result
