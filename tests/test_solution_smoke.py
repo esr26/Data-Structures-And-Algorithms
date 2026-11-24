@@ -105,6 +105,14 @@ class SolutionSmokeTests(unittest.TestCase):
         self.assertEqual(solve([10, 20, 30, 10]), 20)
         self.assertEqual(solve([30, 10, 60, 10, 60, 50]), 40)
 
+    def test_frog_jump_with_k_distances(self):
+        solve = load("Dynamic Programming/Frog Jump with K Distances.py")["Solution"]().frogJump
+        self.assertEqual(solve([], 2), 0)
+        self.assertEqual(solve([10], 2), 0)
+        self.assertEqual(solve([10, 20, 30, 10], 1), 40)
+        self.assertEqual(solve([10, 20, 30, 10], 2), 20)
+        self.assertEqual(solve([10, 20, 30, 10], 3), 0)
+
     def test_missing_import_regressions(self):
         self.assertEqual(load("Graph/01 Matrix.py")["Solution"]().updateMatrix([[0, 1], [1, 1]]), [[0, 1], [1, 2]])
         self.assertEqual(load("Graph/Print Shortest Path.py")["Solution"]().shortestPath(3, 2, [[1, 2, 2], [2, 3, 3]]), [5, 1, 2, 3])
